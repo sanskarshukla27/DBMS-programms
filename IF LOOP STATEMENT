@@ -1,0 +1,51 @@
+#CODE TO DISPLAY MESSAGE
+SQL> set serveroutput on
+SQL> DECLARE
+    eno number(5) NOT NULL := 2
+    ename varchar2(15) := 'Branson Devs';
+    edept CONSTANT varchar2(15) := 'Web Developer';
+BEGIN
+    dbms_output.put_line('Declared Value:');
+    dbms_output.put_line(' Employee Number: ' || eno || ' Employee Name: ' || ename);
+    dbms_output.put_line('Constant Declared:');
+    dbms_output.put_line(' Employee Department: ' || edept);
+END;
+/
+
+#CONDITION CONTROL
+#THE IF STATEMENT
+#IF THEN
+IF condition   
+THEN   
+Statement: {It is executed when condition is true}  
+END IF; 
+
+#IF-THEN-ELSE
+IF condition   
+THEN  
+   {...statements to execute when condition is TRUE...}  
+ELSE  
+   {...statements to execute when condition is FALSE...}  
+END IF;
+
+#IF-THENELSEIF
+IF condition1   
+THEN  
+   {...statements to execute when condition1 is TRUE...}  
+ELSIF condition2   
+THEN  
+   {...statements to execute when condition2 is TRUE...}  
+END IF;
+
+DECLARE  
+   a number(3) := 500;  
+BEGIN  
+   -- check the boolean condition using if statement   
+   IF( a < 20 ) THEN  
+      -- if condition is true then print the following    
+      dbms_output.put_line('a is less than 20 ' );  
+   ELSE  
+      dbms_output.put_line('a is not less than 20 ' );  
+   END IF;  
+   dbms_output.put_line('value of a is : ' || a);  
+END;
