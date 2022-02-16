@@ -1,0 +1,31 @@
+#UNION CLAUSE
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+
+
+#INTERSECT CLAUSE
+SELECT column_name(s) FROM table1
+INTERSECT
+SELECT column_name(s) FROM table2;
+
+SELECT City FROM Customers
+INTERSECT
+SELECT City FROM Suppliers
+ORDER BY City;
+
+
+#MINUS CLAUSE
+SELECT column_name(s) FROM table
+MINUS
+SELECT column_name(s) FROM table;
+
+SELECT City FROM Customers
+MINUS
+SELECT City FROM Suppliers
+ORDER BY City;
