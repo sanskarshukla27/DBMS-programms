@@ -1,0 +1,42 @@
+
+#CREATE A TABLE
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+
+#INSERTION OF DATA
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+#INSERTION OF SELECTED DATA INTO A TABLE FROM ANOTHER TABLE
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+SELECT SupplierName, ContactName, Address, City, PostalCode, Country FROM Suppliers;
+
+#RETRIVING DATA FROM THE TABLE
+SELECT CustomerName, FROM Customers;
+
+
+#RETRIEVING OF SPECIFIC COLOUMN FROM A TABLE
+SELECT CustomerName, City FROM Customers;
+
+
+#ELIMINATION OF DUPLICATES FROM THE SELECT STATEMENT
+SELECT DISTINCT Country FROM Customers;
+
+
+#SELECTING A DATASET FROM TABLE DATA
+SELECT * FROM Customers
+WHERE CustomerID=1;
+
+
+#ALTER
+ALTER TABLE Customers
+ADD Email varchar(255);
+
+ALTER TABLE Customers
+DROP COLUMN Email
