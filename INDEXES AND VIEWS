@@ -1,0 +1,49 @@
+#CREATING AN INDEX FOR A TABLE
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+
+CREATE INDEX idx_lastname
+ON Persons (LastName);
+
+
+#UNIQUESTION INDEX
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...);
+
+CREATE INDEX idx_pname
+ON Persons (LastName, FirstName);
+
+
+#DROPPING INDEX
+DROP INDEX index_name;
+
+
+#CREATION OF VIEWS
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+CREATE VIEW [Brazil Customers] AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country = 'Brazil';
+
+
+#RENAMING THE COLUMNS OF A VIEW
+CREATE OR REPLACE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+CREATE OR REPLACE VIEW [Brazil Customers] AS
+SELECT CustomerName, ContactName, City
+FROM Customers
+WHERE Country = 'Brazil';
+
+
+#DROPPING A VIEW
+DROP VIEW view_name;
+
+DROP VIEW [Brazil Customers];
+
